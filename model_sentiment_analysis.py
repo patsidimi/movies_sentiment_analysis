@@ -333,6 +333,7 @@ def compute_metrics(eval_pred):
         'precision': report['macro avg']['precision'],
         'recall': report['macro avg']['recall'],
         **{f'f1_{i}': report[str(i)]['f1-score'] for i in range(3)}
+    }
 
 #  Εκπαίδευση του μοντέλου
 num_labels = len(np.unique(y_train))
